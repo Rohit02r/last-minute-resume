@@ -217,7 +217,7 @@ const ResumePart = () => {
   const divRef = useRef<HTMLDivElement>(null);
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/assets/myfile.pdf";
+    link.href = "/assets/sample resume.pdf";
     link.download = "myfile.pdf";
     document.body.appendChild(link);
     link.click();
