@@ -8,6 +8,8 @@ import { useMediaQuery } from "react-responsive";
 import axios from "axios";
 import { MdDesktopWindows } from "react-icons/md";
 import { API_URL } from "../config";
+import sampleResume from "../assets/sample resume.pdf"
+
 
 const AUTO_SAVE_DELAY = 2000;
 
@@ -217,8 +219,8 @@ const ResumePart = () => {
   const divRef = useRef<HTMLDivElement>(null);
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/assets/sample resume.pdf";
-    link.download = "myfile.pdf";
+    link.href = sampleResume;
+    link.download = "sample Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
